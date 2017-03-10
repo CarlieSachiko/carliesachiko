@@ -1,0 +1,38 @@
+<h4 class="text-center">Contact</h4>
+
+<div class="contact-div container">
+  <p class="contact-text text-center">Want to get in touch? Fill out the form below or reach out to me directly at <a href="mailto:carliesachiko@gmail.com" target="_top">carliesachiko@gmail.com</a></p>
+
+  <div class="contact-div container">
+    <form id="ajax-contact" method="post" action="../mailer.php">
+      <div class="form-group">
+          <label for="name">Name:</label>
+          <input class="form-control" type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+          <label for="email">Email:</label>
+          <input class="form-control" type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input class="form-control" type="text" id="subject" name="subject" required>
+      </div>
+
+      <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea class="form-control" rows="6" id="message" name="message" required></textarea>
+      </div>
+
+      <div class="field">
+          <button type="submit" class="btn btn-default submit-btn">Send</button>
+      </div>
+    </form>
+    <br>
+    <div id="form-messages"></div>
+  </div>
+
+</div>
+
+<script src="../js/contact.js"></script>

@@ -1,0 +1,243 @@
+/*UNIVERSAL*/
+* {
+  border-radius: 0 !important;
+  font-family: "EB Garamond", serif;
+}
+
+[ui-view].ng-enter {
+  transition: opacity 0.8s;
+  opacity: 0;
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+}
+
+#main-content {
+  min-height: 95vh
+}
+
+/*NAVBAR*/
+.name {
+  max-height: 100px;
+  letter-spacing: 4px;
+  font-size: 20px;
+  font-kerning: 100px;
+  margin: auto;
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.a-name {
+  text-decoration: none !important;
+}
+
+.a-name:hover {
+  text-decoration: none;
+}
+
+header {
+  margin-bottom: 60px;
+}
+
+.navbar {
+  background-color: transparent;
+  font-size: 12px;
+}
+
+.navbar-default {
+  min-height: 40px;
+  border: none;
+}
+
+.nav-text {
+  letter-spacing: 2px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+a.navbar-toggle {
+  border: none !important;
+  float: none;
+  padding: 30px 10px;
+  margin: 8px 15px 8px 0;
+  color: #777;
+  z-index: 9;
+}
+
+a.navbar-toggle:hover {
+  background-color: transparent !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.small-page-brand {
+  display: none;
+}
+
+.navbar-brand {
+  color: black !important;
+}
+
+@media screen and (max-width:768px) {
+  .small-page-brand {
+    display: block;
+    margin: auto !important;
+  }
+
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: inline-block;
+    padding: 10px !important;
+  }
+
+  .navbar.navbar-default {
+    border-bottom: 1px #e7e7e7 solid !important;
+    border-top: 1px #e7e7e7 solid !important;
+  }
+
+  .navbar-collapse {
+    text-align: center !important;
+  }
+
+  header {
+    margin-bottom: 0;
+  }
+}
+
+/*FOOTER*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#github, #linkedin, #ig {
+  max-width: 30px;
+  padding: 0 5px;
+}
+
+@media screen and (max-width:768px) {
+  .footer {
+    position: static !important;
+  }
+
+  #github, #linkedin, #ig {
+    width: 25px;
+  }
+}
+
+/*HOME PAGE*/
+.home {
+  margin-top: 30vh;
+  height: 56vh;
+}
+
+/*ABOUT PAGE*/
+.about {
+  padding: 20px;
+  margin: auto 5vh;
+}
+
+.tech-skills {
+  margin: auto 10vh 10vh 10vh;
+}
+
+.about-pic {
+  max-height: 300px;
+}
+
+
+/*WORK PAGE*/
+.work-img {
+  max-height: 600px;
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.work {
+  height: 700px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width:768px) {
+  .work {
+    height: 570px;
+    margin-bottom: 30px;
+  }
+}
+
+.work-img:hover {
+  opacity: 0.5;
+}
+
+.work-title {
+  padding-top: 5px;
+}
+
+.work-desc {
+  padding: 5px 10px;
+}
+
+.work-btn {
+  background-color: white;
+  border: black 1px solid;
+}
+
+.work-btn:hover {
+  background-color: grey;
+  color: white;
+  border: grey 1px solid;
+}
+
+/*CONTACT PAGE*/
+.contact-text {
+  max-width: 500px;
+  margin: auto;
+}
+
+form {
+  margin: auto;
+  max-width: 800px;
+}
+
+.contact-div {
+  max-width: 801px !important;
+}
+
+.submit-btn {
+  background-color: white;
+  border: black 1px solid;
+}
+
+.submit-btn:hover {
+  background-color: grey;
+  color: white;
+  border: grey 1px solid;
+}
+
+/*DOC PAGE*/
+#documented {
+  margin-bottom: 15px;
+  overflow-x: hidden
+}
+
+.doc-img {
+  max-height:600px;
+}
+
