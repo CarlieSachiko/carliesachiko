@@ -1,43 +1,42 @@
-<div class="contact-div container row center-block">
-  <div class="col-md-6">
-    <img src="../images/documented/IMG_9806.JPG" alt="Contact Carlie" width="350">
-  </div>
-  <div class="col-md-6">
-    <h4 class="">Contact</h4>
-    <p class="contact-text">Want to get in touch? You can reach me directly at <a href="mailto:carliesachiko@gmail.com?Subject=Hey%20Carlie" target="_top">carliesachiko@gmail.com</a>.</p>
-    <br>
-    <p class="contact-text">I'm also on <a href="https://www.linkedin.com/in/carlieclippinger" target="blank">LinkedIn</a>, <a href="https://instagram.com/carliesachiko" target="blank">Instagram</a>, and <a href="https://github.com/CarlieSachiko" target="blank">GitHub</a>.</p>
-  </div>
-<!--   <div class="contact-div container">
-    <form id="ajax-contact" method="post" action="mailer2.php" class="contact-form">
+<div class="contact-div container">
+
+  <h4 class="text-center">Contact</h4>
+  <p class="contact-text text-center">Want to get in touch? Fill out the form below or reach me directly at <a href="mailto:carliesachiko@gmail.com?Subject=Hey%20Carlie" target="_top">carliesachiko@gmail.com</a>.</p>
+
+  <div class="contact-div container">
+    <form id="contact-form" role="form" novalidate>
       <div class="form-group">
-          <label for="con_name">Name:</label>
-          <input class="form-control" type="text" id="con_name" name="con_name" required>
+          <label for="name">Name:</label>
+          <input class="form-control" type="text" id="name" name="name" required="" data-validation-required-message="Please enter your name.">
       </div>
 
       <div class="form-group">
-          <label for="con_email">Email:</label>
-          <input class="form-control" type="email" id="con_email" name="con_email" required>
+          <label for="email">Email:</label>
+          <input class="form-control" type="email" id="email" name="email" required="" data-validation-required-message="Please enter your email address.">
       </div>
 
       <div class="form-group">
-          <label for="con_subject">Subject:</label>
-          <input class="form-control" type="text" id="con_subject" name="con_subject" required>
+          <label for="subject">Subject:</label>
+          <input class="form-control" type="text" id="subject" name="subject" required="" data-validation-required-message="Please enter a subject.">
       </div>
 
       <div class="form-group">
-          <label for="con_message">Message:</label>
-          <textarea class="form-control" rows="6" id="con_message" name="con_message" required></textarea>
+          <label for="message">Message:</label>
+          <textarea class="form-control" rows="6" id="message" name="message" required="" data-validation-required-message="Please enter your message."></textarea>
       </div>
 
       <div class="field">
-          <button type="submit" class="btn btn-default submit-btn" id="con_submit">Send</button>
+          <button type="submit" class="btn btn-default submit-btn" id="submit">Send</button>
       </div>
     </form>
     <br>
-    <div id="form-messages"></div>
-  </div> -->
+    <!-- Ajax response -->
+    <div id="contact-response" class="ajax-response font-alt"></div>
+  </div>
 
 </div>
 
+<!-- Mailer Script -->
 <script src="../js/mailer.js"></script>
+<!-- Bootstrap Validation Script -->
+<script src="../js/jqBootstrapValidation.js"></script>

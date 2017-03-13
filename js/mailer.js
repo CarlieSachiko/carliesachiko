@@ -1,56 +1,58 @@
-/* Contact Form JS*/
 (function($){
-   'use strict';
 
-   $(".contact-form").on('submit', function(e){
-        e.preventDefault();
+    $(document).ready(function() {
 
-        var uri = $(this).attr('action');
-        $("#con_submit").val('Wait...');
-        var con_name = $("#con_name").val();
-        var con_email = $("#con_email").val();
-        var con_message = $("#con_message").val();
+        /* ---------------------------------------------- /*
+         * Contact form ajax
+        /* ---------------------------------------------- */
 
-        var required = 0;
-        $(".requie", this).each(function() {
-            if ($(this).val() == '')
-            {
-                $(this).addClass('reqError');
-                required += 1;
-            }
-            else
-            {
-                if ($(this).hasClass('reqError'))
-                {
-                    $(this).removeClass('reqError');
-                    if (required > 0)
-                    {
-                        required -= 1;
+        $('#contact-form').find('input,textarea').jqBootstrapValidation({
+            preventSubmit: true,
+            submitError: function($form, event, errors) {
+                // additional error messages or events
+            },
+            submitSuccess: function($form, event) {
+                event.preventDefault();
+
+                var submit          = $('#contact-form #submit');
+                var ajaxResponse    = $('#contact-response');
+
+                var name            = $("input#name").val();
+                var email           = $("input#email").val();
+                var message         = $("textarea#message").val();
+                var subject         = $("input#subject").val();
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/mailer.php',
+                    dataType: 'json',
+                    data: {
+                        name: name,
+                        email: email,
+                        message: message,
+                        subject: subject
+                    },
+                    cache: false,
+                    beforeSend: function(result) {
+                        // submit.empty();
+                        // submit.append('<i class="fa fa-cog fa-spin"></i> Wait...');
+                        $("input#name").val('');
+                        $("input#email").val('');
+                        $("textarea#message").val('');
+                        $("input#subject").val('');
+                    },
+                    success: function(result) {
+                        if(result.sendstatus == 1) {
+                            ajaxResponse.html(result.message);
+                            // $form.fadeOut(500);
+                        } else {
+                            ajaxResponse.html(result.message);
+                        }
                     }
-                }
+                });
             }
         });
-        if (required === 0)
-        {
-            $.ajax({
-                type: "POST",
-                url: 'mailer2.php',
-                data: {con_name: con_name, con_email: con_email, con_message: con_message},
-                success: function(data)
-                {
-                    $(".contact-form input, .contact-form textarea").val('');
-                    $("#con_submit").val('Done!');
-          $("#con_submit").addClass("ok");
-                }
-            });
-        }
-        else
-        {
-            $("#con_submit").val('Failed!');
-        }
-   });
-   $(".requie").keyup(function() {
-        $(this).removeClass('reqError');
+
     });
 
 })(jQuery);
