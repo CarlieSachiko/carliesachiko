@@ -3,16 +3,16 @@
 
 angular.module('app', ['ngResource', 'ui.router', 'ngAnimate'])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
       .state('home', {
-        url: '/home',
+        url: '/',
         templateUrl: 'templates/home.html',
         controller: 'HomeController as vm'
       })
       .state('about', {
-        url: '/about',
+        url: '/carlie-clippinger',
         templateUrl: 'templates/about.html',
         controller: 'AboutController as vm'
       })

@@ -33,7 +33,6 @@
   font-kerning: 100px;
   margin: auto;
   font-family: 'Nunito Sans', sans-serif;
-  padding: 10px;
   color: black;
   text-decoration: none;
 }
@@ -88,7 +87,7 @@ a.navbar-toggle:hover {
   color: black !important;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
   .small-page-brand {
     display: block;
     margin: auto !important;
@@ -114,6 +113,10 @@ a.navbar-toggle:hover {
 
   header {
     margin-bottom: 0;
+  }
+
+  .name {
+    margin: 10px;
   }
 }
 
@@ -150,10 +153,6 @@ a.navbar-toggle:hover {
 .about {
   padding: 20px;
   margin: auto 5vh;
-}
-
-.tech-skills {
-  margin: auto 10vh 10vh 10vh;
 }
 
 .about-pic {
@@ -238,6 +237,6 @@ form {
 }
 
 .doc-img {
-  max-height:600px;
+  max-height:550px;
 }
 
