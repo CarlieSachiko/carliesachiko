@@ -12,7 +12,7 @@ function WorkController() {
       image: "../images/rooted-and-wild.jpg",
       desc: "Rooted and Wild is, my dear friend, Mackenzie Myers's personal website featuring her floral designs. I designed it with her in mind, staying true to her aesthetic and feel. The main technologies used were Mongoose, ExpressJS, AngularJS, NodeJS, and Bootstrap.",
       github: "https://github.com/CarlieSachiko/rooted-and-wild-co",
-      live: "https://rooted-and-wild.herokuapp.com/#!/home/index"
+      live: "https://rooted-and-wild.herokuapp.com/"
     },
     {
       title: "Travlr",
@@ -20,6 +20,13 @@ function WorkController() {
       desc: "This is a website I developed for the travel enthusiasts of the world, myself included. Here you can set up a profile, create a bucket list, and plan trips with friends. The primary technologies used were HTML, CSS, Bootstrap, and Ruby on Rails. Moving forward, among many things, I would like to implement an API so users can find their destinations faster and more efficiently.",
       github: "https://github.com/CarlieSachiko/travlr-app",
       live: "https://wdi-travlr-app.herokuapp.com/"
+    },
+    {
+      title: "Food Fight",
+      image: "../images/food-fight.jpg",
+      desc: "The Food Fight app was a collaborative effort with three other individuals to solve the problem of being overloaded with options when searching for somewhere to eat. We utilized Yelp’s API to present restaurant options in a simplified way. My responsibilities were directed towards backend technologies. In the future we would like to work more on the responsive web design.",
+      github: "https://github.com/CarlieSachiko/food-fight-project",
+      live: "https://food-fight-app.herokuapp.com/"
     },
     {
       title: "Dots & Boxes",
