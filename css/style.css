@@ -236,6 +236,19 @@ form {
   overflow-x: hidden
 }
 
+@media screen and (max-width:768px) {
+  .doc-imgs {
+    display: none !important;
+  }
+  .sm-doc-imgs {
+    display: block !important;
+  }
+}
+
+.sm-doc-imgs {
+  display: none;
+}
+
 .doc-img {
   max-height:550px;
 }
