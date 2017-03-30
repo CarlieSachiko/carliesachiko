@@ -232,7 +232,7 @@ form {
 
 /*DOC PAGE*/
 #documented {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   overflow-x: hidden
 }
 
@@ -245,11 +245,17 @@ form {
   }
 }
 
+@media screen and (min-width: 1500px) {
+  .doc-img {
+    height: 730px !important;
+  }
+}
+
 .sm-doc-imgs {
   display: none;
 }
 
 .doc-img {
-  max-height:550px;
+  height:550px;
 }
 
