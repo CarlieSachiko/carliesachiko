@@ -1,15 +1,27 @@
-<div class="row container center-block">
+<div class="container center-block">
 <!-- <div class="col-sm-12">
   <p class="text-center">These are some of the projects I have</p>
 </div> -->
-  <div class="col-sm-6 work" ng-repeat="work in vm.portfolio">
+ <!--  <div class="col-sm-6 work" ng-repeat="work in vm.portfolio">
     <a href="{{work.live}}" target="blank" class="center-block"><img class="img-responsive work-img" ng-src="{{work.image}}" alt="{{work.title}}"></a>
-      <div class="text-center">
-        <h4 class="work-title">{{work.title}}</h4>
-        <p class="work-desc">{{work.desc}}</p>
-        <a href="{{work.github}}" target="blank" class="btn btn-default text-center work-btn">View on GitHub</a>
-        <a href="{{work.live}}" target="blank" class="btn btn-default text-center work-btn">View live</a>
-      </div>
+    <div class="text-center">
+      <h4 class="work-title">{{work.title}}</h4>
+      <p class="work-desc">{{work.desc}}</p>
+      <a href="{{work.github}}" target="blank" class="btn btn-default text-center work-btn">View on GitHub</a>
+      <a href="{{work.live}}" target="blank" class="btn btn-default text-center work-btn">View live</a>
+    </div>
+  </div> -->
+  <div class="row" ng-repeat="work in vm.portfolio">
+    <div class="container col-sm-4">
+      <h4 class="work-title">{{work.title}}</h4>
+      <p class="work-desc">{{work.desc}}</p>
+      <a href="{{work.github}}" target="blank" class="btn btn-default text-center work-btn">View on GitHub</a>
+      <a href="{{work.live}}" target="blank" class="btn btn-default text-center work-btn">View live</a>
+    </div>
+    <div class="scrollmenu col-sm-8">
+      <a href="{{work.live}}" target="blank" class="center-block"><img class="img-responsive work-img" ng-src="{{work.image}}" alt="{{work.title}}"></a>
+      <a href="{{work.live}}" target="blank" class="center-block"><img class="img-responsive work-img" ng-src="{{work.image}}" alt="{{work.title}}"></a>
+    </div>
   </div>
 
 </div>

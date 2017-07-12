@@ -129,7 +129,7 @@ a.navbar-toggle:hover {
 }
 
 #github, #linkedin, #ig {
-  max-width: 30px;
+  max-width: 25px;
   padding: 0 5px;
 }
 
@@ -162,7 +162,7 @@ a.navbar-toggle:hover {
 
 /*WORK PAGE*/
 .work-img {
-  max-height: 600px;
+  /*max-height: 600px;*/
   opacity: 1;
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
@@ -170,7 +170,7 @@ a.navbar-toggle:hover {
 }
 
 .work {
-  height: 700px;
+  height: 600px;
   margin-bottom: 30px;
 }
 
@@ -181,21 +181,37 @@ a.navbar-toggle:hover {
   }
 }
 
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+
 .work-img:hover {
   opacity: 0.5;
 }
 
 .work-title {
-  padding-top: 5px;
+  padding-top: 20px;
 }
 
 .work-desc {
-  padding: 5px 10px;
+  padding: 5px 0px;
+  line-height: 200%;
 }
 
 .work-btn {
   background-color: white;
   border: black 1px solid;
+  padding-top: 10px;
 }
 
 .work-btn:hover {
