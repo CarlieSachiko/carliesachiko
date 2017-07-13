@@ -121,15 +121,26 @@ a.navbar-toggle:hover {
 }
 
 /*FOOTER*/
-.footer {
+/*.footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 40px;
+}*/
+
+.footer {
+  position: fixed;
+  left: 0;
+  overflow:hidden;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  margin-top: 5px;
 }
 
 #github, #linkedin, #ig {
   max-width: 25px;
+  max-height: 15px;
   padding: 0 5px;
 }
 
@@ -153,6 +164,7 @@ a.navbar-toggle:hover {
 .about {
   padding: 20px;
   margin: auto 5vh;
+  margin-bottom: 50px;
 }
 
 .about-pic {
